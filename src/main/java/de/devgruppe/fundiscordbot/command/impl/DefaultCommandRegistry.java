@@ -54,7 +54,7 @@ public class DefaultCommandRegistry extends ListenerAdapter implements CommandRe
     String[] args = Arrays.copyOfRange(splitted, 1, splitted.length);
     Command command = getCommandObjectByName(commandName);
     if (command == null) {
-      message.getTextChannel().sendMessage("Der Command wurde nicht gefunden.").complete();
+      message.getTextChannel().sendMessage("Der Command wurde nicht gefunden. `!commandlist` für eine Liste der Commands.").complete();
       return;
     }
     if (command instanceof ICooldown) {
